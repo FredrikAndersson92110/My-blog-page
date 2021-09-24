@@ -22,8 +22,10 @@ const posts = [];
 
 // HOME 
 app.get("/", (req,res) => {
-  res.render("home", {homeContent: homeStartingContent});
-  console.log(posts);
+  res.render("home", {
+    homeContent: homeStartingContent, 
+    postsArray: posts
+  });
 });
 
 // ABOUT 

@@ -4,4 +4,8 @@
     <h1>Home</h1>
     <p> <%= homeContent %>  </p>
 
+    <% for (let i=0; postsArray.length > i; i++) { %>
+    <% console.log(postsArray[i].title) %> 
+    <% } %> 
+
 <%- include("partials/footer") %> 
