@@ -4,8 +4,10 @@
     <h1>Home</h1>
     <p> <%= homeContent %>  </p>
 
-    <% for (let i=0; postsArray.length > i; i++) { %>
-    <% console.log(postsArray[i].title) %> 
-    <% } %> 
+    <% postsArray.forEach((post) => { %>
+        <h1> <%= post.title %> </h1>
+        <p> <%= post.content.slice(0, 150) %> </p>
+    <% }); %>
+
 
 <%- include("partials/footer") %> 
